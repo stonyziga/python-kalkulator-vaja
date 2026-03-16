@@ -13,8 +13,6 @@ def deli(a, b):
     return a / b
 
 
-zgodovina = []
-
 print("Pozdrav! Mini kalkulator")
 print("1 = seštevanje")
 print("2 = odštevanje")
@@ -27,36 +25,29 @@ izbira = input("Kaj želiš narediti? (0, 1, 2, 3 ali 4): ")
 if izbira == "0":
     print("Program se zapira. Nasvidenje!")
 
-elif izbira in ["1", "2", "3", "4"]:
+elif izbira == "1":
     x = float(input("Prvo število: "))
     y = float(input("Drugo število: "))
+    rezultat = sestej(x, y)
+    print(f"\n{x} + {y} = {rezultat}")
 
-    if izbira == "1":
-        rezultat = sestej(x, y)
-        zapis = f"{x} + {y} = {rezultat}"
+elif izbira == "2":
+    x = float(input("Prvo število: "))
+    y = float(input("Drugo število: "))
+    rezultat = odstej(x, y)
+    print(f"\n{x} - {y} = {rezultat}")
 
-    elif izbira == "2":
-        rezultat = odstej(x, y)
-        zapis = f"{x} - {y} = {rezultat}"
+elif izbira == "3":
+    x = float(input("Prvo število: "))
+    y = float(input("Drugo število: "))
+    rezultat = pomnozi(x, y)
+    print(f"\n{x} × {y} = {rezultat}")
 
-    elif izbira == "3":
-        rezultat = pomnozi(x, y)
-        zapis = f"{x} × {y} = {rezultat}"
-
-    elif izbira == "4":
-        rezultat = deli(x, y)
-        zapis = f"{x} ÷ {y} = {rezultat}"
-
-    print(f"\n{zapis}")
-
-    zgodovina.append(zapis)
-
-    if len(zgodovina) > 3:
-        zgodovina.pop(0)
-
-    print("\nZadnji izračuni:")
-    for z in zgodovina:
-        print(z)
+elif izbira == "4":
+    x = float(input("Prvo število: "))
+    y = float(input("Drugo število: "))
+    rezultat = deli(x, y)
+    print(f"\n{x} ÷ {y} = {rezultat}")
 
 else:
     print("Neveljavna izbira!")
