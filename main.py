@@ -24,27 +24,30 @@ izbira = input("Kaj želiš narediti? (0, 1, 2, 3 ali 4): ")
 
 if izbira == "0":
     print("Program se zapira. Nasvidenje!")
-    exit()
 
 elif izbira == "1":
     x = float(input("Prvo število: "))
     y = float(input("Drugo število: "))
-    print(f"Rezultat: {sestej(x, y)}")
+    rezultat = sestej(x, y)
+    print(f"\n{x} + {y} = {rezultat}")
 
 elif izbira == "2":
     x = float(input("Prvo število: "))
     y = float(input("Drugo število: "))
-    print(f"Rezultat: {odstej(x, y)}")
+    rezultat = odstej(x, y)
+    print(f"\n{x} - {y} = {rezultat}")
 
 elif izbira == "3":
     x = float(input("Prvo število: "))
     y = float(input("Drugo število: "))
-    print(f"Rezultat: {pomnozi(x, y)}")
+    rezultat = pomnozi(x, y)
+    print(f"\n{x} × {y} = {rezultat}")
 
 elif izbira == "4":
     x = float(input("Prvo število: "))
     y = float(input("Drugo število: "))
-    print(f"Rezultat: {deli(x, y)}")
+    rezultat = deli(x, y)
+    print(f"\n{x} ÷ {y} = {rezultat}")
 
 else:
     print("Neveljavna izbira!")
